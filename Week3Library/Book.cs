@@ -16,8 +16,21 @@ namespace Week3Library
         public string Title
         {
             get { return title; }
-            set { title = value; }
+            set
+            {
+                title = value;
+                { // check if any incoming chair is a digit
+                    if (!value.Any(char.IsDigit))
+                    {
+                        title = value;
                     }
+                    else
+                    {
+                        Console.WriteLine("Cannot enter number for title");
+                    }
+                }
+            }
+        }
 
         public string Author
         {
