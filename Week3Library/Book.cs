@@ -10,6 +10,14 @@ namespace Week3Library
         public string Author;
         public int ISBN;
 
+        //paramaterised constructor
+        public Book(string bookTitle, string bookAuthor, int bookISBN)
+        {
+            Title = bookTitle;
+            Author = bookAuthor;
+            ISBN = bookISBN;
+        }
+
         public void DisplayInfo()
         {
             Console.WriteLine($"Book Title: {Title}");
