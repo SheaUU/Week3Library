@@ -35,13 +35,35 @@ namespace Week3Library
         public string Author
         {
             get { return author; }
-            set { author = value; }
+            set
+            {
+                // Checks if any character in the incoming string is a digit
+                if (!value.Any(char.IsDigit))
+                {
+                    author = value;
+                }
+                else
+                {
+                    Console.WriteLine("Error: Author name cannot contain numbers.");
+                }
+            }
         }
 
         public int ISBN
         {
             get { return isbn; }
-            set { isbn = value; }
+            set
+            {
+                // Checks that the incoming string is not blank
+                if (value != 0)
+                {
+                    isbn = value;
+                }
+                else
+                {
+                    Console.WriteLine("Error: ISBN cannot be blank.");
+                }
+            }
         }
 
         // constructor
